@@ -3,9 +3,7 @@ import { css } from "@emotion/react";
 
 import Navbar from "./Navbar";
 import Home from "./Home";
-
-
-
+import InputText from "./InputText";
 
 const styles = {
   content: css`
@@ -18,9 +16,9 @@ const styles = {
 function App() {
   return (
     <div className="App">
-      
       <Navbar />
       <div css={styles.content}>
+        <InputText />
         <Home />
       </div>
     </div>
