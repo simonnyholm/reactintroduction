@@ -4,6 +4,9 @@ import { css } from "@emotion/react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 
+
+
+
 const styles = {
   content: css`
     max-width: 600px;
@@ -15,6 +18,7 @@ const styles = {
 function App() {
   return (
     <div className="App">
+      
       <Navbar />
       <div css={styles.content}>
         <Home />
