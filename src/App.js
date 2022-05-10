@@ -1,14 +1,23 @@
-import "./App.css";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+
+import Navbar from "./Navbar";
+import Home from "./Home";
+
+const styles = {
+  content: css`
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+  `,
+};
 
 function App() {
-  const title = "Velkommen til bloggen";
-  const likes = "86";
-
   return (
     <div className="App">
-      <div className="content">
-        <h1>{title}</h1>
-        <p>Vi har {likes} likes!</p>
+      <Navbar />
+      <div css={styles.content}>
+        <Home />
       </div>
     </div>
   );
