@@ -1,4 +1,4 @@
-const BlogList = ({ blogs, title, handleDelete }) => {
+const BlogList = ({ blogs, title }) => {
   //const blogs = props.blogs;
   //const title = props.title;
 
@@ -9,9 +9,6 @@ const BlogList = ({ blogs, title, handleDelete }) => {
         <div className="blog-preview" key={blog.id}>
           <h2>{blog.title}</h2>
           <p>Skrevet af: {blog.author}</p>
-          <button onClick={() => handleDelete(blog.id)}>
-            Slet blogindlæg fra liste
-          </button>
         </div>
       ))}
     </div>
