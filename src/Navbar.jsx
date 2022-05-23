@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
+import { Outlet, Link } from "react-router-dom";
+
 const Navbar = () => {
   const styles = {
     navbar: css`
@@ -29,17 +31,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav css={styles.navbar}>
-      <h1 css={styles.heading}>Den blockede blog</h1>
-      <div css={styles.links} className="links">
-        <a css={styles.atags} href="/">
-          Home
-        </a>
-        <a css={styles.atags} href="/create">
-          Ny blog
-        </a>
-      </div>
-    </nav>
+    <>
+      <nav css={styles.navbar}>
+        <h1 css={styles.heading}>Den blockede blog</h1>
+        <div css={styles.links} className="links">
+          <Link to="/invoices">Invoices</Link> |{" "}
+          <Link to="/expenses">Expenses</Link>
+        </div>
+      </nav>
+      <Outlet />
+    </>
   );
 };
 

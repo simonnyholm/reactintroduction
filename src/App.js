@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div css={styles.content}>
-        <InputText />
-        <Home />
-      </div>
+      <div css={styles.content}></div>
+
+      <InputText />
+      <Home />
     </div>
   );
 }
